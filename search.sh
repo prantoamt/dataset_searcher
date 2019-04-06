@@ -10,9 +10,9 @@ echo "Enter 9 for Date : "
 
 read choice
 
-if [ "$choice" -eq 1 ];then echo "Enter Station name:\n%s";read value;awk -v data="$value" -F',' '$1 ~ data' air_quality_Nov2017.csv
+if [ "$choice" -eq 1 ];then echo "Enter Station name: ";read value;awk -v data="$value" -F',' '$1 ~ data' air_quality_Nov2017.csv
 
-elif [ "$choice" -eq 2 ];then echo "Enter Air Quality:\n%s";read value;awk -v data="$value" -F',' '$2 ~ data' air_quality_Nov2017.csv
+elif [ "$choice" -eq 2 ];then echo "Enter Air Quality: ";read value;awk -v data="$value" -F',' '$2 ~ data' air_quality_Nov2017.csv
 
 elif [ "$choice" -eq 3 ];then echo "Enter O3 Quality : ";read value;awk -v data="$value" -F, '$6 ~ data' air_quality_Nov2017.csv
 
