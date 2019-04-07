@@ -1,4 +1,5 @@
 import csv
+from tabulate import tabulate
 
 file = open('air_quality_Nov2017.csv')
 
@@ -10,9 +11,6 @@ for row in csv_file:
 
 searching_criteria = data_list[0]
 data_list.remove(data_list[0])
-searching_criteria.remove('Longitude')
-searching_criteria.remove('Latitude')
-searching_criteria.remove('Generated')
 
 print ("Search by: ")
 for item in searching_criteria:
@@ -33,61 +31,17 @@ if (search_option == 1):
 			print (row)
 
 if (search_option == 2):
-	input_search = input("03 Hour: ")
+	input_range_1 = float(input("Longitude from ____ ?:"))
+	input_range_2 = float(input("to ____ ?:"))
 	for row in data_list:
-		if (input_search == data_list[data_list.index(row)][4]):
+		if (float(data_list[data_list.index(row)][search_option]) >= input_range_1 and float(data_list[data_list.index(row)][search_option]) <= input_range_2):
 			print (row)
 
 if (search_option == 3):
-	input_search = input("O3 Quality: ")
+	input_range_1 = float(input("Latitude from ____ ?:"))
+	input_range_2 = float(input("to ____ ?:"))
 	for row in data_list:
-		if (input_search == data_list[data_list.index(row)][5]):
-			print (row)
-
-if (search_option == 4):
-	input_search = input("O3 Value: ")
-	for row in data_list:
-		if (input_search == data_list[data_list.index(row)][6]):
-			print (row)
-
-if (search_option == 5):
-	input_search = input("NO2 Hour: ")
-	for row in data_list:
-		if (input_search == data_list[data_list.index(row)][7]):
-			print (row)
-
-if (search_option == 6):
-	input_search = input("NO2 Quality: ")
-	for row in data_list:
-		if (input_search == data_list[data_list.index(row)][8]):
-			print (row)
-
-
-if (search_option == 7):
-	input_search = input("NO2 Value: ")
-	for row in data_list:
-		if (input_search == data_list[data_list.index(row)][9]):
-			print (row)	
-
-
-if (search_option == 8):
-	input_search = input("PM10 Hour: ")
-	for row in data_list:
-		if (input_search == data_list[data_list.index(row)][10]):
-			print (row)
-
-if (search_option == 9):
-	input_search = input("PM10 Quality: ")
-	for row in data_list:
-		if (input_search == data_list[data_list.index(row)][11]):
-			print (row)
-
-
-if (search_option == 10):
-	input_search = input("PM10 Value: ")
-	for row in data_list:
-		if (input_search == data_list[data_list.index(row)][12]):
-			print (row)							
-
+		if (float(data_list[data_list.index(row)][search_option]) >= input_range_1 and float(data_list[data_list.index(row)][search_option]) <= input_range_2):
+			print (row) 	
 
 file.close()
