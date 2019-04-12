@@ -1,4 +1,4 @@
-"Station","Air Quality","Longitude","Latitude","O3 Hour","O3 Quality","O3 Value","NO2 Hour","NO2 Quality","NO2 Value","PM10 Hour","PM10 Quality","PM10 Value","Generated","Date Time"
+"Station","AirQuality","Longitude","Latitude","O3Hour","O3Quality","O3Value","NO2Hour","NO2Quality","NO2Value","PM10Hour","PM10Quality","PM10Value","Generated","DateTime"
 "Barcelona - Sants","Good",2.1331,41.3788,NA,NA,NA,"0h","Good",84,NA,NA,NA,"01/11/2018 0:00",1541027104
 "Barcelona - Eixample","Moderate",2.1538,41.3853,"0h","Good",1,"0h","Moderate",113,"0h","Good",36,"01/11/2018 0:00",1541027104
 "Barcelona - Gràcia","Good",2.1534,41.3987,"0h","Good",10,"0h","Good",73,NA,NA,NA,"01/11/2018 0:00",1541027104
